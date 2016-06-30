@@ -47,7 +47,7 @@ public class TimeFormatter {
                     } else {
                         time = String.valueOf(then.get(Calendar.DAY_OF_MONTH)) + " "
 			    + then.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.US)
-			    + " " + then.get(Calendar.YEAR);
+			    + " " + String.valueOf(then.get(Calendar.YEAR) - 2000);
                     }
                 }
             } else {
