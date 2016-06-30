@@ -31,10 +31,21 @@ public class TimeFormatter {
             long diff = d1.getTime() - d2.getTime();
 
             diffInDays = (int) (diff / (1000 * 60 * 60 * 24));
-            if (diffInDays > 0) {
+            if {
+                int diffHours = (int) (diff / (60 * 60 * 1000));
+                if (diffHours > 0) {
+                    time = (diffHours + "h");
+                } else {
+                    int diffMinutes = (int) ((diff / (60 * 1000) % 60));
+                    if (diffMinutes < 1) {
+                        int diffSeconds = (int) (diff / (1000));
+                        time = (diffSeconds + "s");
+                    } else {
+                        time = (diffMinutes + "m");
+                    }
+                }
+            } else (diffInDays > 0) {
                 if (diffInDays == 1) {
-                    time = (diffInDays + "d");
-                } else if (diffInDays < 7) {
                     time = (diffInDays + "d");
                 } else {
                     Calendar now = Calendar.getInstance();
@@ -50,26 +61,7 @@ public class TimeFormatter {
 			    + " " + String.valueOf(then.get(Calendar.YEAR) - 2000);
                     }
                 }
-            } else {
-                int diffHours = (int) (diff / (60 * 60 * 1000));
-                if (diffHours > 0) {
-                    if (diffHours == 1) {
-                        time = (diffHours + "h");
-                    } else {
-                        time = (diffHours + "h");
-                    }
-                } else {
-                    int diffMinutes = (int) ((diff / (60 * 1000) % 60));
-                    if (diffMinutes < 1) {
-                        int diffSeconds = (int) (diff / (1000));
-                        time = (diffSeconds + "s");
-                    } else if (diffMinutes == 1) {
-                        time = (diffMinutes + "m");
-                    } else {
-                        time = (diffMinutes + "m");
-                    }
-                }
-            }
+            } 
         } catch (ParseException e) {
             e.printStackTrace();
         }
