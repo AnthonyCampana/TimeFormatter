@@ -4,5 +4,6 @@ Given a date String of the format given by the Twitter API, returns a display-fo
 
 ## Usage
 Just copy TimeFormatter.java into a Java class in your project, then call
+
     String formattedTime = TimeFormatter.getTimeDifference(String dateString);
 To turn a Twitter API-returned dateString into a String properly formatted for display. 
