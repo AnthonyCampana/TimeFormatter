@@ -6,4 +6,12 @@ Given a date String of the format given by the Twitter API, returns a display-fo
 Just copy TimeFormatter.java into a Java class in your project, then call
 
     String formattedTime = TimeFormatter.getTimeDifference(String dateString);
-to turn a Twitter API-returned dateString into a String properly formatted for display. 
+to turn a Twitter API-returned dateString into a String properly formatted for display that represents the relative time difference (matching Twitter's behavior when viewing a list of Tweets), or
+
+    String formattedAbsoluteTime = TimeFormatter.getTimeStamp(String rawJsonDate);
+to turn a Twitter API-returned dateString into a String formatted like that of the official Twitter app's detailed Tweet view. 
+
+## Contributors
+- [ewilden](https://github.com/ewilden)
+- [dgisser](https://github.com/dgisser)
+- [kshia](https://github.com/kshia)
