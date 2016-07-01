@@ -12,6 +12,6 @@ to turn a Twitter API-returned dateString into a String properly formatted for d
 to turn a Twitter API-returned dateString into a String formatted like that of the official Twitter app's detailed Tweet view. 
 
 ## Contributors
-- [ewilden](https://github.com/ewilden)
-- [dgisser](https://github.com/dgisser)
-- [kshia](https://github.com/kshia)
+- Evan Wildenhain ([ewilden](https://github.com/ewilden))
+- David Gisser ([dgisser](https://github.com/dgisser))
+- Kristina Shia ([kshia](https://github.com/kshia))
